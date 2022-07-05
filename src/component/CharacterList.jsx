@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function NavPage(props){
     return(
         <header className="d-flex justify-content-between align-items-center">
-            <button className="btn btn-primary btn-sm" onClick={()=>{props.page==1?null:props.setPage(props.page-1)}}>Page: {props.page==1?1:props.page-1}</button>
+            <button className={props.page==1?"invisible":"btn btn-primary btn-sm "} onClick={()=>{props.page==1?null:props.setPage(props.page-1)}}>Page: {props.page==1?1:props.page-1}</button>
             <button className="btn btn-primary btn-sm" onClick={()=>{props.setPage(props.page+1)}}>Page: {props.page+1}</button>
         </header>
     )
